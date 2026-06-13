@@ -33,7 +33,7 @@ browser localStorage; the backend keeps no state besides live MCP connections.
 
 ## Extending
 
-- How to add tools: `docs/extending-tools.md`
+- How to add tools: `extending-tools.md`
 
 ## Legacy Python backend (Deprecated)
 
