@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mini-agent</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11/styles/github-dark.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <aside id="sidebar">
+    <button id="new-chat-btn">+ New chat</button>
+    <nav id="session-list"></nav>
+    <footer id="sidebar-footer">
+      <select id="profile-select" title="Active model profile"></select>
+      <button id="settings-btn" title="Settings">&#9881;</button>
+    </footer>
+  </aside>
+  <main id="chat">
+    <div id="thread"></div>
+    <div id="composer">
+      <div id="attachments"></div>
+      <div id="input-row">
+        <button id="attach-btn" title="Attach files">&#128206;</button>
+        <textarea id="input" rows="1" placeholder="Message&hellip;"></textarea>
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+  </main>
+</div>
+
+<dialog id="settings-modal">
+  <header>
+    <button class="tab active" data-tab="profiles">Profiles</button>
+    <button class="tab" data-tab="mcp">MCP Servers</button>
+    <button id="settings-close">&#10005;</button>
+  </header>
+  <section id="tab-profiles" class="tab-panel"></section>
+  <section id="tab-mcp" class="tab-panel" hidden></section>
+</dialog>
+
+<input type="file" id="file-input" multiple hidden>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11/highlight.min.js"></script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
